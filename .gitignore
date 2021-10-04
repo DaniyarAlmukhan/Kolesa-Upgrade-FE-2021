@@ -3,3 +3,5 @@ node_modules
 dist
 dist-ssr
 *.local
+style.scss
+src/css/main.scss
