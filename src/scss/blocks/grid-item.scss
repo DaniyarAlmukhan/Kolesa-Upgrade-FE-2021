@@ -1,0 +1,73 @@
+.grid-item {
+    flex-direction: column;
+    cursor: pointer;
+    max-width: 330px;
+    margin-bottom: 24px;
+
+    &__imgs {
+        position: relative;
+    }
+
+    &__badge {
+        position: absolute;
+        left: 16px;
+        bottom: 16px;
+    }
+
+    &__price {
+        font-size: 24px;
+        color: $blue-primary;
+        margin-bottom: 8px;
+        line-height: 36px;
+    }
+
+    &__info {
+        padding: 16px 16px 0 16px;
+    }
+
+    &__title {
+        font-size: 16px;
+        margin-bottom: 4px;
+        line-height: 24px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__additional {
+        font-size: 14px;
+        line-height: 24px;
+        color: $gray;
+        margin-bottom: 16px;
+    }
+
+    &__order-btn {
+        background: $blue-primary;
+        width: 298px;
+        height: 44px;
+        line-height: 44px;
+        font-size: 16px;
+        color: $white;
+        border: none;
+        border-radius: 8px;
+        display: none;
+        cursor: pointer;
+        box-shadow: 0 2px 4px 0 $black-primary-10;
+    }
+
+    &:hover {
+        box-shadow: 0 2px 10px 0 $black-primary-10;
+        height: 518px;
+        border-radius: 8px;
+        margin-bottom: -36px;
+        z-index: 2;
+
+        .grid-item__price {
+            color: $red;
+        }
+
+        .grid-item__order-btn {
+            display: block;
+        }
+    }
+}

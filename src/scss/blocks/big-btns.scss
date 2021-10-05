@@ -1,0 +1,47 @@
+.btn-big {
+    @include reset-btn;
+
+    width: 280px;
+    height: 56px;
+    display: inline-block;
+    border-radius: 16px;
+    line-height: 56px;
+    padding: 10px 24px;
+    font-weight: $semi-bold;
+    font-size: 20px;
+    color: $black-primary;
+    text-align: center;
+
+    img {
+        vertical-align: middle;
+        margin-right: 16px;
+    }
+
+    &--green {
+        background: $payed-green;
+
+        &:hover {
+            background: $payed-green-hover;
+        }
+    }
+
+    &--yellow {
+        background: $payed-yellow;
+
+        &:hover {
+            background: $payed-yellow-hover;
+        }
+    }
+
+    &--blue {
+        background: $payed-blue;
+
+        &:hover {
+            background: $payed-blue-hover;
+        }
+    }
+
+    &--mr24 {
+        margin-right: 24px;
+    }
+}

@@ -1,0 +1,50 @@
+.footer {
+    background: $black-primary;
+    color: $white;
+    min-width: 100vw;
+
+    &__container {
+        justify-content: space-between;
+        margin: 0 auto;
+        width: 1368px;
+    }
+
+    &__social {
+        font-size: 16px;
+        padding: 20px 0 20px 32px;
+    }
+
+    &__credits {
+        margin-bottom: 12px;
+    }
+
+    &__contact {
+        font-size: 14px;
+        padding: 24px 40px 24px 0;
+        line-height: 24px;
+        position: relative;
+        height: 48px;
+    }
+
+    &__text {
+        line-height: 24px;
+        margin-right: 48px;
+    }
+
+    &__contact-btn {
+        @include reset-btn;
+
+        width: 150px;
+        height: 36px;
+        box-shadow: 0 2px 4px 0 rgba(28, 24, 25, 0.1);
+        line-height: 24px;
+        background: $white;
+        color: $blue-primary;
+        border-radius: 8px;
+
+        &:hover {
+            color: $white;
+            background: $blue-primary;
+        }
+    }
+}
