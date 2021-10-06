@@ -1,0 +1,9 @@
+.product-filter-btn {
+    display: none;
+
+    &:checked + label {
+        background: $blue-lighter;
+        color: $black-primary;
+        border: none;
+    }
+}

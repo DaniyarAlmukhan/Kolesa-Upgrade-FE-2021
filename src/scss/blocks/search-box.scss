@@ -1,0 +1,25 @@
+.search-box {
+    background: rgba(242, 242, 243, 1);
+    width: 308px;
+    height: 44px;
+    border: none;
+    font-size: 16px;
+    border-radius: 8px;
+    text-indent: 56px;
+
+    &:focus + label {
+        display: none;
+    }
+
+    &:focus {
+        text-indent: 10px;
+    }
+
+    &__mag-glass {
+        position: absolute;
+        border: none;
+        background: none;
+        left: 19px;
+        top: 14px;
+    }
+}

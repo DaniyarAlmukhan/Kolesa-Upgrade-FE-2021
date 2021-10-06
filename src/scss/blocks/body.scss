@@ -11,24 +11,13 @@
         padding-bottom: 40px;
     }
 
-    .filter-label {
-        border: 1px solid $black-primary-10;
-        border-radius: 8px;
-        color: $blue-primary;
-        padding: 12px 18px;
+    &__filter-label {
         position: relative;
         margin-right: 8px;
         margin-bottom: 8px;
-        cursor: pointer;
     }
 
-    .product-filter-btn {
-        display: none;
-
-        &:checked + label {
-            background: $blue-lighter;
-            color: $black-primary;
-            border: none;
-        }
+    &__grid-item {
+        margin-bottom: 24px;
     }
 }
