@@ -1,0 +1,23 @@
+.body {
+    width: 1368px;
+    justify-content: space-between;
+
+    &__content {
+        padding-right: 48px;
+    }
+
+    &__point-btns {
+        padding-top: 24px;
+        padding-bottom: 40px;
+    }
+
+    &__filter-label {
+        position: relative;
+        margin-right: 8px;
+        margin-bottom: 8px;
+    }
+
+    &__grid-item {
+        margin-bottom: 24px;
+    }
+}
