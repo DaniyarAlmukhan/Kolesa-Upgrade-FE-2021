@@ -5,30 +5,30 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/src/assets/favicon.svg" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/src/css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
 </head>
 
 <body>
-    <div class="item">
-        <div class="item__container">
-            <div class="item__imgs">
-                <div class="item__imgs-main"><img src="/src/assets/image 7.png" alt="Main Item Picture"></div>
-                <div class="item__imgs-preview">
-                    <img src="/src/assets/🌆 Image.png" alt="Preview Image">
-                    <img src="/src/assets/🌆 Image (1).png" alt="Preview Image" class="selected">
-                    <img src="/src/assets/🌆 Image (2).png" alt="Preview Image">
+    <div class="modal">
+        <div class="modal__container">
+            <div class="modal__imgs imgs">
+                <div class="imgs__main-pic"><img src="/src/assets/image 7.png" alt="Main modal Picture"></div>
+                <div class="imgs__preview-pics">
+                    <img src="/src/assets/🌆 Image.png" alt="Preview Image" class="imgs__preview-pic">
+                    <img src="/src/assets/🌆 Image (1).png" alt="Preview Image"
+                        class="imgs__preview-pic--selected imgs__preview-pic">
+                    <img src="/src/assets/🌆 Image (2).png" alt="Preview Image" class="imgs__preview-pic">
 
                 </div>
             </div>
-            <div class="item__info">
+            <div class="modal__item-info item-info">
                 <div>
-                    <h3 class="item__title mb-8">Футболка "Эволюционируй или сдохни"</h3>
-                    <h3 class="item__price mb-8 fw-600">100 баллов</h3>
-                    <button class="btn btn-blue mb-24">Заказать</button>
+                    <h3 class="item-info__title mb-8">Футболка "Эволюционируй или сдохни"</h3>
+                    <h3 class="item-info__price mb-8 fw-600">100 баллов</h3>
+                    <button class="btn btn--blue mb-24">Заказать</button>
                 </div>
-                <div class="balance">
+                <div class="modal__balance balance">
                     <div class="balance__info">
                         <div class="balance__title mb-4">Твой баланс:</div>
                         <div class="balance__amount">3 945 баллов</div>
@@ -37,41 +37,45 @@
                         <img src="/src/assets/🛍.png" alt="Balance Icon">
                     </div>
                 </div>
-                <div class="item__color mb-24">
-                    <div class="item__color__title mb-8">Цвета:</div>
-                    <div class="item__color__picker">
-                        <input type="radio" name="color-pick" id="color__blue" value="color__blue" checked>
-                        <label for="color__blue">Синий</label>
-                        <input type="radio" name="color-pick" id="color__beige" value="color__beige">
-                        <label for="color__beige"> Бежевый</label>
-                        <input type="radio" name="color-pick" id="color__gray" value="color__beige">
-                        <label for="color__gray"> Серый</label>
+                <div class="modal__color mb-24">
+                    <div class="color__title mb-8">Цвета:</div>
+                    <div class="color__picker">
+                        <input type="radio" name="color-pick" id="color__blue" value="color__blue"
+                            class="product-filter-btn" checked>
+                        <label for="color__blue" class="filter-label">Синий</label>
+                        <input type="radio" name="color-pick" id="color__beige" value="color__beige"
+                            class="product-filter-btn">
+                        <label for="color__beige" class="filter-label"> Бежевый</label>
+                        <input type="radio" name="color-pick" id="color__gray" value="color__beige"
+                            class="product-filter-btn">
+                        <label for="color__gray" class="filter-label"> Серый</label>
                     </div>
                 </div>
-                <div class="item__size mb-24">
-                    <div class="item__size__title mb-8">Размер:</div>
-                    <div class="item__size__picker">
+                <div class="modal__size mb-24">
+                    <div class="size__title mb-8">Размер:</div>
+                    <div class="size__picker">
 
-                        <input type="radio" name="size-pick" id="size_s" value="size_s" checked>
-                        <label for="size_s"> S</label>
+                        <input type="radio" name="size-pick" id="size_s" value="size_s" class="product-filter-btn"
+                            checked>
+                        <label for="size_s" class="filter-label"> S</label>
 
-                        <input type="radio" name="size-pick" id="size_m" value="size_m">
-                        <label for="size_m">M</label>
+                        <input type="radio" name="size-pick" id="size_m" value="size_m" class="product-filter-btn">
+                        <label for="size_m" class="filter-label">M</label>
 
-                        <input type="radio" name="size-pick" id="size_l" value="size_l">
-                        <label for="size_l">L</label>
+                        <input type="radio" name="size-pick" id="size_l" value="size_l" class="product-filter-btn">
+                        <label for="size_l" class="filter-label">L</label>
 
                     </div>
                 </div>
-                <div class="item__details mb-24">
-                    <div class="item__details__title mb-4 fw-600">Детали:</div>
-                    <div class="item__details__text">Брендированная толстовка от Qazaq Republic. Материал: Хлопок
+                <div class="modal__details mb-24">
+                    <div class="details__title mb-4 fw-600">Детали:</div>
+                    <div class="details__text">Брендированная толстовка от Qazaq Republic. Материал: Хлопок
                         80%,
                         Вискоза 20%</div>
                 </div>
-                <div class="item__advice">
-                    <div class="item__advice__title mb-4 fw-600">Как выбрать размер:</div>
-                    <div class="item__advice__text">Написать дяде Рику для уточнения.</div>
+                <div class="modal__advice">
+                    <div class="advice__title mb-4 fw-600">Как выбрать размер:</div>
+                    <div class="advice__text">Написать дяде Рику для уточнения.</div>
                 </div>
             </div>
             <button class="close-button"><img src="/src/assets/Icon shape.png" alt="close button"></button>

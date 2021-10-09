@@ -1,0 +1,18 @@
+.imgs {
+    &__preview-pics {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 330px;
+    }
+
+    &__preview-pic {
+        margin-right: 8px;
+        margin-bottom: 8px;
+
+        &--selected {
+            border: $blue-primary 1px solid;
+            border-radius: 8px;
+        }
+    }
+}
