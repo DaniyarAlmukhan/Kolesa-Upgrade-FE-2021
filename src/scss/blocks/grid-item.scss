@@ -2,9 +2,15 @@
     flex-direction: column;
     cursor: pointer;
     max-width: 330px;
+    background: $white;
 
     &__imgs {
         position: relative;
+    }
+
+    &__pic {
+        width: 330px;
+        height: 330px;
     }
 
     &__badge {

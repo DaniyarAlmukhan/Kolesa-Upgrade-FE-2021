@@ -1,4 +1,10 @@
 .imgs {
+    &__main-pic {
+        height: 330px;
+        width: 330px;
+        margin-bottom: 16px;
+    }
+
     &__preview-pics {
         display: flex;
         justify-content: center;
@@ -9,6 +15,8 @@
     &__preview-pic {
         margin-right: 8px;
         margin-bottom: 8px;
+        width: 50px;
+        height: 50px;
 
         &--selected {
             border: $blue-primary 1px solid;
