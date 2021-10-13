@@ -1,140 +1,26 @@
-const clothing = [
-    {
-        id:      0,
-        price:   200,
-        title:   'Футболка "Эволюционируй или Сдохни"',
-        size:    'S/M/L',
-        color:   ['blue', 'beige', 'gray'],
-        isNew:   false,
-        img:     './src/assets/kolesatshirt.png',
-        details: 'Брендированная футболка Материал: Хлопок 80%, Вискоза 20%',
-        advice:  'Написать дяде Рику для уточнения.',
-    },
-    {
-        id:      1,
-        price:   250,
-        title:   'Футболка <Frontend>',
-        size:    'S/M',
-        color:   ['blue', 'beige', 'gray'],
-        isNew:   true,
-        img:     './/src/assets/frontendtshirt.jpg',
-        details: 'Футболка Материал: Хлопок 80%, Вискоза 20%',
+import { clothing, accessories, allProducts } from './mock';
 
-    },
-    {
-        id:      2,
-        price:   300,
-        title:   'Свитшот',
-        size:    'S/L',
-        color:   ['blue', 'beige', 'gray'],
-        isNew:   true,
-        img:     './src/assets/kolesasweatshirt.jpg',
-        details: 'Брендированный Свитшот Материал: Хлопок 80%, Вискоза 20%',
-    },
-    {
-        id:      3,
-        price:   350,
-        title:   'Свитшот Front end developer by day',
-        size:    'M/L',
-        color:   ['blue', 'beige', 'gray'],
-        isNew:   false,
-        img:     './src/assets/frontendsweatshirt.jpg',
-        details: 'Свитшот Материал: Хлопок 80%, Вискоза 20%',
-        advice:  'Написать дяде Морти для уточнения.',
-    },
-    {
-        id:      4,
-        price:   400,
-        title:   'Худи React',
-        size:    'S/M/L',
-        color:   ['blue', 'beige', 'gray'],
-        isNew:   false,
-        img:     './src/assets/react1.jpg',
-        details: 'Брендированный Худи Материал: Хлопок 80%, Вискоза 20%',
-    },
-    {
-        id:      5,
-        price:   225,
-        title:   'Худи Frontend Happy Hour',
-        size:    'S',
-        color:   ['blue', 'beige', 'gray'],
-        isNew:   false,
-        img:     './src/assets/hoodie.jpg',
-        details: 'Худи Материал: Хлопок 80%, Вискоза 20%',
-    },
-];
-const accessories = [
-    {
-        id:      6,
-        price:   100,
-        title:   'Бутылка',
-        volume:  0.7,
-        isNew:   false,
-        img:     './src/assets/kolesabottle.jpg',
-        details: 'Бутылка для воды с трубочкой',
-    },
-    {
-        id:               7,
-        price:            125,
-        title:            'Зонт',
-        accessoriesColor: 'Синий/Красный/Черный',
-        isNew:            false,
-        img:              './src/assets/umbrella.jpg',
-    },
-    {
-        id:               8,
-        price:            50,
-        title:            'Картхолдер',
-        accessoriesColor: 'Синий/Красный/Черный',
-        isNew:            false,
-        img:              './src/assets/cartholder.jpg',
-    },
-    {
-        id:      9,
-        price:   120,
-        title:   'Бутылка',
-        isNew:   true,
-        volume:  1,
-        img:     './src/assets/kolesabottle.jpg',
-        details: 'Бутылка для воды с трубочкой',
-    },
-    {
-        id:               10,
-        price:            175,
-        title:            'Зонт',
-        accessoriesColor: 'Синий/Красный/Черный',
-        isNew:            false,
-        img:              './src/assets/umbrella.jpg',
-    },
-    {
-        id:               11,
-        price:            75,
-        title:            'Картхолдер',
-        accessoriesColor: 'Синий/Красный/Черный',
-        isNew:            true,
-        img:              './src/assets/cartholder.jpg',
-    },
-];
 const grid = document.querySelector('.js__product-grid');
 
 // Make card
 
-const makeProductCard = (img, isNew, price, title, size, volume, accessoriesColor, id) => {
+const makeProductCard = (product) => {
     const card = document.createElement('div');
 
     card.classList = 'body__grid-item grid-item js__grid-item';
-    card.id = id;
+    card.id = product.id;
 
     card.innerHTML = `
             <div class="grid-item__imgs">
-                <img src=${img} alt="Item Picture" class="grid-item__pic">
-                ${isNew ? '<img src="/src/assets/Label.svg" alt="" class="grid-item__badge">' : ''}
+                <img src=${product.img} alt="Item Picture" class="grid-item__pic">
+                ${product.isNew ? '<img src="/src/assets/Label.svg" alt="" class="grid-item__badge">' : ''}
             </div>
             <div class="grid-item__info">
-                <div class="grid-item__price fw-600">${price} баллов</div>
-                <div class="grid-item__title fw-600">${title}</div>
-                <div class="grid-item__additional"> ${size ? `Размеры ${size}` : ''} ${volume ? `Объем ${volume}л` : ''}
-                ${accessoriesColor ? `Цвет ${accessoriesColor}` : ''}
+                <div class="grid-item__price fw-600">${product.price} баллов</div>
+                <div class="grid-item__title fw-600">${product.title}</div>
+                <div class="grid-item__additional"> ${product.size ? `Размеры ${product.size}` : ''}
+                ${product.volume ? `Объем ${product.volume}л` : ''}
+                ${product.accessoriesColor ? `Цвет ${product.accessoriesColor}` : ''}
                 </div>
                 <button type="submit" class='grid-item__order-btn'>Заказать</button>
             </div>`;
@@ -154,16 +40,13 @@ const loadCards = (category) => {
     clearGrid();
     category.sort((x, y) => (x.isNew < y.isNew ? 1 : -1));
     category.forEach((card) => {
-        const cardHtml = makeProductCard(card.img, card.isNew, card.price, card.title,
-            card.size, card.volume, card.accessoriesColor, card.id);
+        const cardHtml = makeProductCard(card);
 
         grid.append(cardHtml);
     });
 };
 
 // Concating two categories
-
-const allProducts = clothing.concat(accessories);
 
 // Load all card on page load
 
@@ -192,6 +75,7 @@ const closeWindow = (modal) => {
     document.addEventListener('click', (e) => {
         if (e.target.className === 'close' || e.target.className === 'modal__wrapper') {
             modal.style.display = 'none';
+            modal.remove();
             document.querySelector('html').style.overflow = 'auto';
         }
     });
