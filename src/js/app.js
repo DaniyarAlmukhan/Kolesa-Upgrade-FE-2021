@@ -189,9 +189,6 @@ grid.addEventListener('click', (e) => {
     while (gridItem.className !== 'body__grid-item grid-item js__grid-item') {
         gridItem = gridItem.parentElement;
     }
-
-    buildModal(+gridItem.id);
-
     document.querySelector('.wrapper').append(buildModal(+gridItem.id));
     document.querySelector('html').style.overflow = 'hidden';
 });
