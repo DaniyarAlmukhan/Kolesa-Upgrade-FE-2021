@@ -31,7 +31,7 @@ const makeProductCard = (product) => {
 // Clear Grid
 
 const clearGrid = () => {
-    while (grid.firstElementChild) { grid.removeChild(grid.firstElementChild); }
+    grid.innerHTML = '';
 };
 
 // Load Cards
