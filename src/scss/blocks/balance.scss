@@ -1,0 +1,17 @@
+.balance {
+    background: $foam;
+    display: flex;
+    border-radius: 16px;
+    width: 196px;
+    align-items: center;
+
+    &__info {
+        padding: 8px 16px;
+        margin-right: 12px;
+    }
+
+    &__title {
+        font-size: 14px;
+        color: $gray;
+    }
+}

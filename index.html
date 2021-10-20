@@ -2,84 +2,100 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/src/assets/favicon.svg" />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/src/css/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | Main</title>
 </head>
 
 <body>
-    <div class="item">
-        <a rel="stylesheet" href="main.html">MAIN PAGE</a>
-        <div class="item__container">
-            <div class="item__imgs">
-                <div class="item__imgs-main"><img src="/src/assets/image 7.png" alt="Main Item Picture"></div>
-                <div class="item__imgs-preview">
-                    <img src="/src/assets/🌆 Image.png" alt="Preview Image">
-                    <img src="/src/assets/🌆 Image (1).png" alt="Preview Image" class="selected">
-                    <img src="/src/assets/🌆 Image (2).png" alt="Preview Image">
+    <div class="wrapper dl-flex">
+        <div class="wrapper__container container">
+            <header class="header dl-flex">
+                <div class="header__kolesa-logo"><img src="/src/assets/Vector.svg" alt="Kolesa Logo"></div>
+                <div class="header__search-box">
+                    <input type="search" name="search-box" id="search-box" placeholder="Поиск" class="search-box">
+                    <label for="search-box"><img src="/src/assets/Icon shape.svg" alt="Mag-glass"
+                            class="search-box__mag-glass"></label>
+                </div>
+                <div class="header__profile profile">
+                    <a href="#" class='profile__link dl-flex'>
+                        <img src="/src/assets/profile pic.jpg" alt="Profile picture" class="profile__pic">
+                        <div class="profile__right">
+                            <div class="profile__name fw-600">Мортиджан</div>
+                            <div class="profile__balance">300 баллов</div>
+                        </div>
+                    </a>
+                </div>
+            </header>
+            <div class="body dl-flex">
+                <nav class="navbar">
+                    <ul class="navbar__list">
+                        <li class="navbar__link"><a href="">Оргсхема</a> </li>
+                        <li class="navbar__link"><a href="">Kolesa Team</a></li>
+                        <li class="navbar__link navbar__link--selected"><a href="">Kolesa Shop</a></li>
+                        <li class="navbar__link"><a href="">Картина компании</a></li>
+                        <li class="navbar__link"><a href="">Новости</a></li>
+                        <li class="navbar__link"><a href="">Education</a></li>
+                        <li class="navbar__link"><a href="">Guidelines</a></li>
+                        <li class="navbar__link"><a href="">Библиотека</a></li>
+                        <li class="navbar__link"><a href="">FAQ</a></li>
+                    </ul>
+                </nav>
+                <div class="body__content">
+                    <img src="/src/assets/Баннер.jpg" alt="Banner">
+                    <div class="body__point-btns">
+                        <a href="#" class="btn-big btn-big--green btn-big--mr24">
+                            <img src="/src/assets/➕.png" alt="+" class="btn-big__img">Получить баллы
+                        </a>
+                        <a href="#" class="btn-big btn-big--yellow btn-big--mr24">
+                            <img src="/src/assets/❓.png" alt="?" class="btn-big__img">Как получить баллы
+                        </a>
+                        <a href="#" class="btn-big btn-big--blue">
+                            <img src="/src/assets/🎁.png" alt="gift" class="btn-big__img">Подарить баллы
+                        </a>
+                    </div>
 
+                    <div class="body__product-filter-btns">
+                        <input type="radio" name="product-filter" id="all-products" value="all-products"
+                            class="product-filter-btn js__filter-btn" checked>
+                        <label for="all-products" class="body__filter-label filter-label">Все товары</label>
+                        <input type="radio" name="product-filter" id="clothing" value="clothing"
+                            class="product-filter-btn js__filter-btn">
+                        <label for="clothing" class="body__filter-label filter-label"> Одежда</label>
+                        <input type="radio" name="product-filter" id="accessories" value="accessories"
+                            class="product-filter-btn js__filter-btn">
+                        <label for="accessories" class="body__filter-label filter-label"> Аксессуары</label>
+                    </div>
+
+                    <div class="body__products-grid products-grid js__product-grid">
+
+                    </div>
                 </div>
             </div>
-            <div class="item__info">
-                <div>
-                    <h3 class="item__title mb-8">Футболка "Эволюционируй или сдохни"</h3>
-                    <h3 class="item__price mb-8 fw-600">100 баллов</h3>
-                    <button class="btn btn-blue mb-24">Заказать</button>
-                </div>
-                <div class="balance">
-                    <div class="balance__info">
-                        <div class="balance__title mb-4">Твой баланс:</div>
-                        <div class="balance__amount">3 945 баллов</div>
-                    </div>
-                    <div class="balance__icon">
-                        <img src="/src/assets/🛍.png" alt="Balance Icon">
-                    </div>
-                </div>
-                <div class="item__color mb-24">
-                    <div class="item__color__title mb-8">Цвета:</div>
-                    <div class="item__color__picker">
-                        <input type="radio" name="color-pick" id="color__blue" value="color__blue" checked>
-                        <label for="color__blue">Синий</label>
-                        <input type="radio" name="color-pick" id="color__beige" value="color__beige">
-                        <label for="color__beige"> Бежевый</label>
-                        <input type="radio" name="color-pick" id="color__gray" value="color__beige">
-                        <label for="color__gray"> Серый</label>
-                    </div>
-                </div>
-                <div class="item__size mb-24">
-                    <div class="item__size__title mb-8">Размер:</div>
-                    <div class="item__size__picker">
-
-                        <input type="radio" name="size-pick" id="size_s" value="size_s" checked>
-                        <label for="size_s"> S</label>
-
-                        <input type="radio" name="size-pick" id="size_m" value="size_m">
-                        <label for="size_m">M</label>
-
-                        <input type="radio" name="size-pick" id="size_l" value="size_l">
-                        <label for="size_l">L</label>
-
-                    </div>
-                </div>
-                <div class="item__details mb-24">
-                    <div class="item__details__title mb-4 fw-600">Детали:</div>
-                    <div class="item__details__text">Брендированная толстовка от Qazaq Republic. Материал: Хлопок
-                        80%,
-                        Вискоза 20%</div>
-                </div>
-                <div class="item__advice">
-                    <div class="item__advice__title mb-4 fw-600">Как выбрать размер:</div>
-                    <div class="item__advice__text">Написать дяде Рику для уточнения.</div>
-                </div>
-            </div>
-            <button class="close-button"><img src="/src/assets/Icon shape.png" alt="close button"></button>
         </div>
+
+        <footer class="footer dl-flex">
+            <div class="footer__container container dl-flex">
+                <div class="footer__social">
+                    <div class="footer__credits">© Kolesa Group</div>
+                    <a href=""><img src="/src/assets/Instagram.png" alt="Instagram"></a>
+                    <a href=""><img src="/src/assets/YouTube.png" alt="Instagram"></a>
+                    <a href=""><img src="/src/assets/VK.png" alt="Instagram"></a>
+                </div>
+                <div class="footer__contact dl-flex">
+                    <div class="footer__text">
+                        <p>Есть идеи что улучшить?</p>
+
+                        <p>Не знаешь, с кем решить проблему?</p>
+                    </div>
+                    <button type="submit" class="footer__contact-btn">Написать</button>
+                </div>
+            </div>
+        </footer>
     </div>
-
     <script type="module" src="/src/js/main.js"></script>
+    <script type="module" src="/src/js/app.js"></script>
 </body>
-
 </html>
+
