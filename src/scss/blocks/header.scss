@@ -1,0 +1,18 @@
+.header {
+    padding: 32px 0 24px 0;
+
+    &__kolesa-logo {
+        margin-right: 64px;
+        padding-top: 6px;
+    }
+
+    &__search-box {
+        position: relative;
+    }
+
+    &__profile {
+        margin-left: auto;
+        padding-right: 50px;
+        min-width: 150px;
+    }
+}

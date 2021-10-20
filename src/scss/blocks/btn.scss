@@ -1,0 +1,13 @@
+.btn {
+    @include reset-btn;
+
+    font-size: 14px;
+    padding: 6px 36px;
+    border-radius: 8px;
+    line-height: 24px;
+
+    &--blue {
+        background: $blue-primary;
+        color: $white;
+    }
+}
